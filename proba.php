@@ -42,6 +42,11 @@
                 </tr>
             </table>
         </section>
+        <form method="post">
+          <input type="text" name="imie" >
+          <input type="text" name="nazwisko" >
+          <button type="button" name="button">dadsad</button>
+        </form>
         <section>
             <h1>Pracownicy</h1>
             <?php
@@ -50,7 +55,14 @@
                     die("nie udało sie" . $polaczenie->connect_error);
                 } else {
                 echo "połączenie powiodło się";
-                }
+              }
+              if(isset($_POST['Nazwisko']) && isset($_POST['Imie'])){
+                $n=$_POST['nazwisko'];
+                $i=$_POST['imie'];
+                $zapytanie="INSERT INTO pracownicy(nazwisko,imię) VALUES('$n','$i')";
+                $wynik=$polaczenie->query($zapytanie);
+              }
+
             ?>
         </section>
         <footer>
