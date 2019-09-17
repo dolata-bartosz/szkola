@@ -43,6 +43,32 @@
   echo ++$y;  //7
   ###########################################################
 
+  $text1 = '4ssd';
+  $text2 = 'Drugi tekst';
+  $text3 = '7';
+  $number = 15;
+  $j = -1;
+  $c = 100;
+  //operatory rzutowania;
+  // bool int float string aray object unset
+  $x = (int)$text1;
+  echo '<br>', $x;
+
+  $x= (bool)$j;
+  echo $x;
+
+  $c = (unset)$c;
+  echo $c; //null
+  echo gettype($c); //null
+
+  $l=(float)$number;
+  echo gettype($l);
+  echo $l;
+
+  echo PHP_INT_SIZE; //8
+  $w;
+  echo @gettype($w);
+
 
 
 ?>
