@@ -13,18 +13,18 @@
 
   $x=0b1010;
   $x = $x >> 1; //101
-  echo $x . '<br';
+  echo $x . '<br>';
   $x = $x << 2; //10100
-  echo $x . '<br';
+  echo $x . '<br>';
 
   $a=1;
   $b=1.0;
   if($a === $b){
-    echo "identyczne";
-  } else echo "rozne";
+    echo "identyczne".'<hr>';
+  } else echo "rozne".'<hr>';
 
-  echo gettype($a);
-  echo gettype($b);
+  echo gettype($a).'<hr>';
+  echo gettype($b).'<hr>';
 
   $x = 11;
   $y = 1;
@@ -41,6 +41,10 @@
   $y= ++$x;
   echo $y; //6
   echo ++$y;  //7
+  ###########################################################
+
+
+
 ?>
 
   </body>
