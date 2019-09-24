@@ -8,8 +8,9 @@
     Początek pliku
     <?php
     //  include('./dolaczeniepliku/index.php');
-    require('./asdres');
-    require_once('./adresss');
+  //  require('./dolaczaniepliku/index.php'); wyświetla kilka razy
+    require_once('./dolaczaniepliku/index.php');
+    require_once('./dolaczaniepliku/index.php');//wyświetla tylko raz
      ?>
     Koniec pliku
   </body>

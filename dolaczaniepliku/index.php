@@ -1,3 +1,3 @@
 <?php
-  echo "zawartosć pliku o nazwie";
+  echo "<hr>zawartosć pliku o nazwie<hr>";
  ?>
