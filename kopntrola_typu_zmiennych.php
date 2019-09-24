@@ -23,11 +23,11 @@
     #####################################
     //Zmienne superglobalne
     //$_GET, $_POST, $COOKIE, $_FILES, $_SESSION, $_SERVER
-    echo $_SERVER['SERVER_PORT'],'<br>';//80
-    echo $_SERVER['SERVER_NAME'],'<br>';//127.0.0.1
-    echo $_SERVER['SCRIPT_NAME'],'<br>';//zsk....ścieżka
-    echo $_SERVER['SERVER_PROTOCOL'],'<br>'; //HTTP/1.1
-    echo $_SERVER['DOCUMENT_ROOT'],'<br>'; //HTTP/1.1
+    echo $_SERVER['SERVER_PORT'].'<br>';//80
+    echo $_SERVER['SERVER_NAME'].'<br>';//127.0.0.1
+    echo $_SERVER['SCRIPT_NAME'].'<br>';//zsk....ścieżka
+    echo $_SERVER['SERVER_PROTOCOL'].'<br>'; //HTTP/1.1
+    echo $_SERVER['DOCUMENT_ROOT'].'<br>'; //HTTP/1.1
      ?>
   </body>
 </html>
