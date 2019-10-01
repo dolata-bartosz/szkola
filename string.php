@@ -107,7 +107,7 @@ TEKST;
     echo '<br>',ucfirst($newLogin),'<hr>';
     /*
     Zadanie 2
-    Napisz aplikacje cenzurujaca zdanie podane przez uzytkowanika w formulażu użytkownik podaje dane do formularza.
+    Napisz aplikacje cenzurujaca zdanie podane przez uzytkowanika w formularzu użytkownik podaje dane do formularza.
     Zamiń słowa : biay, czarny na ciąg zaj iw ' #### '
     */
     ob_clean();
