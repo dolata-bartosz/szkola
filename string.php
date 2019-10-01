@@ -97,4 +97,37 @@ TEKST;
     $surname = substr('Janusz Kowalski',7,5);
     echo '<br>',$surname;
 
+    //zamiana polskich znakow
+
+    $login = "żakół";
+    $censore = array('ą','ę','ś','ć','ż','ź','ó','ń','ł');
+    $replace = array('a','e','s','c','z','z','o','n','l');
+
+    $newLogin = str_replace($censore,$replace,$login);
+    echo '<br>',ucfirst($newLogin),'<hr>';
+    /*
+    Zadanie 2
+    Napisz aplikacje cenzurujaca zdanie podane przez uzytkowanika w formulażu użytkownik podaje dane do formularza.
+    Zamiń słowa : biay, czarny na ciąg zaj iw ' #### '
+    */
+    ob_clean();
+    echo  <<< FORM
+    <form  method="post">
+      <input type="text" name="dane" placeholder="wpisz zdanie"><br><br>
+      <input type="submit" value="zatwierdz">
+    </form>
+
+FORM;
+  if(isset($_POST['dane'])){
+    $data = $_POST['dane'];
+    echo '<h6>Blędne dane: '.$data.'</h6>';
+    $censore = array('biały','czarny');
+    $replace ='#####';
+    $newdata = str_replace($censore,$replace,$data);
+    echo '<h6>Prawidłowe dane: '.$newdata.'</h6>';
+
+  }
+
+
+
  ?>
