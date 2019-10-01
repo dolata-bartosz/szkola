@@ -85,4 +85,16 @@ TEKST;
     if(strpos($text1,$text2) !== false){
       echo 'Jest';
     } else echo 'Nie ma';
+
+    //przetwarzanie ciagu znakow
+
+    $replace = str_replace('%name%', 'Janusz', 'Mam na imie: %name%');
+    echo '<br>',$replace;
+
+    $surname = substr('Janusz Kowalski',3);
+    echo '<br>',$surname;
+
+    $surname = substr('Janusz Kowalski',7,5);
+    echo '<br>',$surname;
+
  ?>
