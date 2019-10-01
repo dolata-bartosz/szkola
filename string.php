@@ -82,4 +82,7 @@ TEKST;
     */
     $text1 = 'abcdabcd';
     $text2 = 'ab';
+    if(strpos($text1,$text2) !== false){
+      echo 'Jest';
+    } else echo 'Nie ma';
  ?>
