@@ -14,6 +14,16 @@
     <body>
       <?php
       include 'form_zad.php';
+      if(!empty($_POST['text']) && !empty($_POST['text_2']) && !empty($_POST['num'])){
+        $area = $_POST['text'];
+        $text = $_POST['text_2'];
+        $number = $_POST['num'];
+        $newarea = trim($area);
+        $newtext = trim($text);
+        $newnumber = trim($number);
+        $newarea = substr($newarea,30);
+        echo nl2br($newarea);
+      }
        ?>
     </body>
   </html>
