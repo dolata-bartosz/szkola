@@ -5,14 +5,17 @@
     <title></title>
   </head>
   <body>
-    <form method="get">
-      <input type="text" name="century" placeholder="podaj kraj">
-      <input type="submit" value="wyślij">
-    </form>
+
     <?php
-      if(!empty($_GET['century'])){
-        ob_clean();
+      if(!empty($_GET['century']) && isset($_GET['button'])){
         echo $_GET['century'];
+      }else {
+        ?>
+        <form method="get">
+          <input type="text" name="century" placeholder="podaj kraj">
+          <input type="submit" name="button" value="wyślij">
+        </form>
+      <?php
       }
      ?>
   </body>
