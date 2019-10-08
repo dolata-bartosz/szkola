@@ -21,8 +21,10 @@
         $newarea = trim($area);
         $newtext = trim($text);
         $newnumber = trim($number);
-        $newarea = substr($newarea,30);
-        echo nl2br($newarea);
+        $newarea = substr($newarea,0,50);
+        echo nl2br($newarea).'<br>';
+        echo nl2br($newtext).'<br>';
+        echo $number.'<br>';
       }
        ?>
     </body>
