@@ -1,7 +1,7 @@
 <?php
   if(!isset($_POST['button'])){
-    header('location: ../5_form.php');
+    header('location: ../form.php');
   }else {
-    echo "ok";
+      echo 'ok';
   }
  ?>
