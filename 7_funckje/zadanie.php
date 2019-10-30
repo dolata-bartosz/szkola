@@ -17,7 +17,6 @@
       <?php
         if(!empty($_POST['ilosc'])&&(isset($_POST['bnt'])||isset($_POST['bnt2']))){
           $ilosc = $_POST['ilosc'];
-          $_POST['bnt']
           echo $ilosc;
           if($ilosc>=1 && $ilosc <=70){
           ?>
@@ -26,11 +25,12 @@
             for($i=1;$i<=$ilosc;$i++){
                 echo "<br>","<input type=\"number\" name=\"ilosc$i\">";
             }
+
             ?>
             <input type="submit" name="bnt2">
           </form>
           <?php
-
+            $_POST['ilosc']=2;
           for($i=1;$i<=$ilosc;$i++){
             $t[$i] = $_POST["ilosc$i"];
           }
