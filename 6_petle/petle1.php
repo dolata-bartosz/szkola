@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
-      table, td{
+      table, td, th{
         border: 1px solid black;
         border-collapse: collapse;
         padding:10px;
@@ -23,11 +23,19 @@
           $wiersze=$_POST['number'];
           $kolumny=$_POST['number1'];
           $i=1;
-          $j=1;
-          do{
+          $j=0;
             echo '<tr>';
             do{
-
+              
+              echo '<th>',$j,'</th>';
+              $j++;
+            }while($j<=$kolumny);
+            echo '</tr>';
+          do{
+            echo '<tr>';
+            echo '<th>',$i,'</th>';
+            $j=1;
+            do{
               $wynik=$i*$j;
               echo '<td>',$wynik,'</td>';
               $j++;
@@ -36,6 +44,7 @@
             echo '</tr>';
             $i++;
           }while($i<=$wiersze);
+        
         }
        ?>
        </table>
