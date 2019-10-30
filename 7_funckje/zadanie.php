@@ -30,11 +30,12 @@
             <input type="submit" name="bnt2">
           </form>
           <?php
-            $_POST['ilosc']=2;
           for($i=1;$i<=$ilosc;$i++){
-            $t[$i] = $_POST["ilosc$i"];
+            if(!empty($_POST["ilosc$i"])){
+              $t[$i] = $_POST["ilosc$i"];
+                }
           }
-          echo $t[2];
+
         }
         }
        ?>
