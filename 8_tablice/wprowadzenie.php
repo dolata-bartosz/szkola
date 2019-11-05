@@ -120,7 +120,7 @@
   echo "<hr>";
   ###############################################
   //
-  function namale($tab){
+  function namale(&$tab){
     for($i=0;$i<count($tab);$i++){
       $tab[$i]=strtolower($tab[$i]);
     }
@@ -128,6 +128,14 @@
   echo "<hr>";
   namale($tab);
   wyswietl($tab);
-
+  sort($tab);
+  wyswietl($tab);
+  function pierwsza(&$tab){
+    for($i=0;$i<count($tab);$i++){
+      $tab[$i]=ucfirst($tab[$i]);
+    }
+  }
+  pierwsza($tab);
+  wyswietl($tab);
 
  ?>
