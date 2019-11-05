@@ -118,5 +118,16 @@
   sort($tab);
   wyswietl($tab);
   echo "<hr>";
+  ###############################################
+  //
+  function namale($tab){
+    for($i=0;$i<count($tab);$i++){
+      $tab[$i]=strtolower($tab[$i]);
+    }
+  }
+  echo "<hr>";
+  namale($tab);
+  wyswietl($tab);
+
 
  ?>
