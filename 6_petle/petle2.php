@@ -25,12 +25,20 @@
           $kolumny=$_POST['number1'];
           $i=1;
           $j=1;
+           echo '<tr>';
+            do{
+              
+              echo '<th>',$j,'</th>';
+              $j++;
+            }while($j<=$kolumny);
+            echo '</tr>';
           do{
             echo '<tr>';
+            echo '<th>',$i,'</th>';
+            $j=1;
             do{
-
               if($i!=$j)$wynik=$i*$j;
-              else $wynik='*';
+                else $wynik='*';
               echo '<td>',$wynik,'</td>';
               $j++;
             }while($j<=$kolumny);

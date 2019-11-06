@@ -44,7 +44,6 @@
             echo '</tr>';
             $i++;
           }while($i<=$wiersze);
-        
         }
        ?>
        </table>
