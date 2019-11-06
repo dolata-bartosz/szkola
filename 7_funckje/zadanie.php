@@ -52,12 +52,11 @@
             ?>
           <table>
             <tr><th>Krewny Lp.</th><th>Wiek</th></tr>
-          </tr>
               <?php
               for($i=0;$i<$ilosc;$i++){
                 echo "<tr><th>",$i+1,"</th><td>$tab[$i] lat</td></tr>";
               }
-              echo "<tr><th>Średni wiek</th><td>",srednia($tab,$ilosc),"</td></tr>";
+              echo "<tr><th>Średni wiek</th><td>",round(srednia($tab,$ilosc),2),"</td></tr>";
               echo "<tr><th>Najmłodszy</th><td>",najmlodszy($tab,$ilosc),"</td></tr>";
               echo "<tr><th>Najstarszy</th><td>",najstarszy($tab,$ilosc),"</td></tr>";
                ?>
