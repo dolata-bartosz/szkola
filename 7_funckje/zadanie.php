@@ -6,38 +6,35 @@
   </head>
   <body>
       <?php
-        if(!empty($_POST['ilosc'])&&(isset($_POST['bnt'])||isset($_POST['bnt2']))){
-          $ilosc = $_POST['ilosc'];
-          echo $ilosc;
-          if($ilosc>=1 && $ilosc <=70){
-          ?>
-            <form method="post">
-              <input style="display: none;" type="text" name="ilosc" value="<?php $ilosc ?>" >
-              <?php
-            for($i=1;$i<=$ilosc;$i++){
-                echo "<br>","<input type=\"number\" name=\"ilosc$i\">";
-                }
-
-            ?>
-            <input type="submit" name="bnt2">
-          </form>
-          <?php
-              for($i=1;$i<=$ilosc;$i++){
-                  if(!empty($_POST["ilosc$i"])){
-                      echo $_POST["ilosc$i"];
-                  }
-                }
+        if(isset($_POST['bnt2'])){
+            $ilosc = $_POST['nilosc'];
+            for($i=0;$i<$ilosc;$i++){
+              echo $_POST["ilosc$i"],"<br>";
             }
-          } else {
-        ?>
-        <form method="post">
-          <input type="number" name="ilosc">
-          <input type="submit" name="bnt">
-          </form>
+        } else if(!empty($_POST['ilosc']) && isset($_POST['bnt'])){
+          $ilosc = $_POST['ilosc'];
+            if($ilosc>=1 && $ilosc <=70){
+            ?>
+              <form method="post">
+                <input type="hidden" name="nilosc" value="<?php echo $ilosc ?>"
+                <?php
+              for($i=0;$i<$ilosc;$i++){
+                  echo "<br>","<input type=\"number\" name=\"ilosc$i\">";
+                  }
 
+              ?>
+              <input type="submit" name="bnt2">
+            </form>
+        <?php
+            }
+        } else {
+          ?>
+          <form method="post">
+            <input type="number" name="ilosc">
+            <input type="submit" name="bnt">
+            </form>
         <?php
           }
-       ?>
-
+          ?>
   </body>
 </html>
