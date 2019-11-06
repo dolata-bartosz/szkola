@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
-      table, td{
+      table, td, th{
         border: 1px solid black;
         border-collapse: collapse;
         padding:10px;
         margin:10px;
       }
+        th{
+            background-color: lightgray;
+        }
       .red{
         background-color: red;
       }
@@ -29,8 +32,15 @@
           $i=1;
           $j=1;
           $suma=0;
+            echo '<tr><th> </th>';
+            do{
+              echo '<th>',$j,'</th>';
+              $j++;
+            }while($j<=$kolumny);
+            echo '</tr>';
           do{
-            echo '<tr>';
+            echo '<tr><th>',$i,'</th>';
+              $j=1;
             do{
               $wynik=$i*$j;
               if($i==$j){

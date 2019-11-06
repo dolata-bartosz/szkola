@@ -13,6 +13,9 @@
         th{
             background-color: lightgray;
         }
+      .red{
+        background-color: red;
+      }
     </style>
   </head>
   <body>
@@ -28,7 +31,8 @@
           $kolumny=$_POST['number1'];
           $i=1;
           $j=1;
-           echo '<tr><th> </th>';
+          $suma=0;
+            echo '<tr><th> </th>';
             do{
               echo '<th>',$j,'</th>';
               $j++;
@@ -36,19 +40,24 @@
             echo '</tr>';
           do{
             echo '<tr><th>',$i,'</th>';
-            $j=1;
+              $j=1;
             do{
-              if($i!=$j)$wynik=$i*$j;
-                else $wynik='*';
-              echo '<td>',$wynik,'</td>';
+              $wynik=$i*$j;
+              if($i+$j==$kolumny+1){
+                echo '<td class="red">',$wynik,'</td>';
+                $suma+=$wynik;
+              }else echo '<td>',$wynik,'</td>';
               $j++;
             }while($j<=$kolumny);
             $j=1;
             echo '</tr>';
             $i++;
           }while($i<=$wiersze);
-        }
+
        ?>
        </table>
+       <?php
+        echo "suma danych przekatnej: ",$suma;}
+          ?>
   </body>
 </html>
