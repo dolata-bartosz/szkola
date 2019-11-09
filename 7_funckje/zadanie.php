@@ -56,13 +56,10 @@
               for($i=0;$i<$ilosc;$i++){
                 echo "<tr><th>",$i+1,"</th><td>$tab[$i] lat</td></tr>";
               }
-              echo "<tr><th>Średni wiek</th><td>",round(srednia($tab,$ilosc),2),"</td></tr>";
-              echo "<tr><th>Najmłodszy</th><td>",najmlodszy($tab,$ilosc),"</td></tr>";
-              echo "<tr><th>Najstarszy</th><td>",najstarszy($tab,$ilosc),"</td></tr>";
-               ?>
-            </table> <?php
-
-
+              echo "</table>";
+              echo "<ul><li>Średni wiek: ",round(srednia($tab,$ilosc),2),"</li>";
+              echo "<li>Najmłodszy: ",najmlodszy($tab,$ilosc),"</li>";
+              echo "<li>Najstarszy: ",najstarszy($tab,$ilosc),"</li></ul>";
 
         } else if(!empty($_POST['ilosc']) && isset($_POST['bnt'])){
           $ilosc = $_POST['ilosc'];
