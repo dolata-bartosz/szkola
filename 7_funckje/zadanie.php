@@ -56,7 +56,9 @@
               for($i=0;$i<$ilosc;$i++){
                 echo "<tr><th>",$i+1,"</th><td>$tab[$i] lat</td></tr>";
               }
-              echo "</table>";
+                ?>
+              </table>
+              <?php
               echo "<ul><li>Średni wiek: ",round(srednia($tab,$ilosc),2),"</li>";
               echo "<li>Najmłodszy: ",najmlodszy($tab,$ilosc),"</li>";
               echo "<li>Najstarszy: ",najstarszy($tab,$ilosc),"</li></ul>";
@@ -73,6 +75,7 @@
                   }
 
               ?>
+            
               <input type="submit" name="bnt2">
             </form>
         <?php
