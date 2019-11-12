@@ -137,5 +137,41 @@
   }
   pierwsza($tab);
   wyswietl($tab);
-
- ?>
+    echo "<hr>";
+  ###############################################
+  //sortowanie asocjacyjnej wedlug wartosci
+  $tabAssoc = array(
+    'name' => 'Janusz',
+    'wiek' => 30,
+    'country' => 'Polska',
+    'city' => 'Poznań'
+  );
+    showArrayAsoc($tabAssoc);
+    asort($tabAssoc);
+    echo "<hr>";
+    showArrayAsoc($tabAssoc);
+    arsort($tabAssoc);
+    echo "<hr>";
+    showArrayAsoc($tabAssoc);
+    #############################################
+    //sortowanie asocjacyjnej wedlug wartosci
+    echo "<hr>";
+    showArrayAsoc($tabAssoc);
+    ksort($tabAssoc);
+    echo "<hr>";
+    showArrayAsoc($tabAssoc);
+    krsort($tabAssoc);
+    echo "<hr>";
+    showArrayAsoc($tabAssoc);
+    echo "<hr>";
+    ############################################
+    //wyswietlanie danych
+    var_dump($tabAssoc);
+    echo "<hr>";
+    print_r($tabAssoc);
+    echo "<hr>";
+    echo "<pre>";
+    print_r($tabAssoc);
+    echo "</pre>";
+    echo "<hr>";
+  ?>
