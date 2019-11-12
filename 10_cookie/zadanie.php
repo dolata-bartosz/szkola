@@ -15,10 +15,18 @@
     </form>
   <?php
   if(isset($_POST['btn'])){
-    $im = $_POST['name'];
-    $nzw = $_POST['lastname'];
-    $_SESSION['imie']=$im;
-    setcookie('nazwisko', $nzw ,time()+(60‬*60*24*2));
+    if(!isset($_COOKIE['nazwisko'])){
+      $im = $_POST['name'];
+      $nzw = $_POST['lastname'];
+      $_SESSION['imie']=$im;
+      setcookie("nazwisko", $nzw ,time()+172800);
+      header("location: ./zadanie.php");
+    }  else {
+        echo "Imię: ", $_SESSION['imie'],"<br>";
+        echo "Nazwisko: ", $_COOKIE['nazwisko'],"<br>";
+
+      }
+
   }
 
    ?>
