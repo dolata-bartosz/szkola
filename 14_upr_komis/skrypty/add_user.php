@@ -14,5 +14,7 @@
      }else{
        echo 'err';
      }
+   } else{
+     header('location: ../');
    }
  ?>
